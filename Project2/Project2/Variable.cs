@@ -8,7 +8,7 @@ namespace Project2
 {
     public class Variable
     {
-        public string name ;
+        public string name;
         public string[] content = new string[3];
         public List<Tuple<char, string, string>> adj = new List<Tuple<char, string, string>>();
 
@@ -17,7 +17,11 @@ namespace Project2
         public static Dictionary<string, string> convertedState = new Dictionary<string, string>();
         public List<Tuple<char, string, string>> adjInRule = new List<Tuple<char, string, string>>();
 
-        public Variable(string startState,string endState,string between)
+        public Variable(string NameRule)
+        {
+            nameInRule = NameRule;
+        }
+        public Variable(string startState, string endState, string between)
         {
             content[0] = startState;
             content[1] = between;
